@@ -1,5 +1,5 @@
 import React from 'react';
-import { Spring, SpringProps } from 'react-spring/renderprops'
+import { Spring, SpringProps } from 'react-spring/renderprops';
 
 type AnimatedProps<T extends object> = {
     options: SpringProps<T>,
