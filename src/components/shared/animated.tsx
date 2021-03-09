@@ -8,5 +8,5 @@ type AnimatedProps<T extends object> = {
 export const Animated: React.FC<AnimatedProps<object>> = ({ children, options}) => {
     const props = useSpring(options);
     
-    return <animated.div>{children}</animated.div>
+    return <animated.div style={props}>{children}</animated.div>
 }
