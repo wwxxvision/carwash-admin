@@ -1,12 +1,8 @@
 import React from 'react';
-import { useSpring, animated, UseSpringProps } from 'react-spring'
+import { Spring, SpringProps } from 'react-spring/renderprops'
 
 type AnimatedProps<T extends object> = {
-    options: UseSpringProps<T>
+    options: SpringProps<T>,
 }
 
-export const Animated: React.FC<AnimatedProps<object>> = ({ children, options}) => {
-    const props = useSpring(options);
-    
-    return <animated.div style={props}>{children}</animated.div>
-}
+export const Animated: React.FC<AnimatedProps<object>> = ({ children, options }) => <Spring {...options}>{style => <div style={style}>{children}</div>}</Spring>
